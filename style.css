@@ -1,0 +1,57 @@
+:root{--bg:#FAF6F0;--card:#fff;--ink:#1F2A2E;--muted:#5F6B70;--accent:#0F766E;--accent2:#E2F1EE;--line:#E6DFD3}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+.side{position:sticky;top:0;height:100vh;padding:40px 32px;display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--accent);color:#fff}
+.avatar{width:170px;height:170px;border-radius:50%;object-fit:cover;object-position:center top;border:5px solid rgba(255,255,255,.35);margin-bottom:20px}
+.side h1{font-size:2.2rem;line-height:1.15}
+.role{color:#CFEAE5;min-height:1.7em;margin-top:6px}
+.role::after{content:"|";margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+nav{display:flex;flex-direction:column;gap:2px;width:100%;margin:28px 0}
+nav a{color:#D9EFEB;text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:500;transition:.2s}
+nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav a.active{background:#fff;color:var(--accent)}
+.btn{display:inline-block;padding:12px 28px;border-radius:10px;font:600 .95rem Inter,sans-serif;text-decoration:none;cursor:pointer;border:0;background:#fff;color:var(--accent);margin-top:auto;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+main{padding:0 6vw;max-width:860px}
+.sec{padding:80px 0 20px}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+h2{font-size:clamp(2rem,4.5vw,2.8rem);line-height:1.15;margin:6px 0 22px}
+.sec>p:not(.eyebrow){color:var(--muted);margin-bottom:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:24px}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+dt{color:var(--accent);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+dd{font-weight:500}
+.skills{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.skills li{padding:9px 20px;border-radius:8px;background:var(--accent2);color:var(--accent);font-weight:500;transition:.2s}
+.skills li:hover{background:var(--accent);color:#fff}
+.list article{display:flex;gap:22px;padding:24px 0;border-top:1px solid var(--line)}
+.list article:last-child{border-bottom:1px solid var(--line)}
+.num{font-family:"DM Serif Display",serif;font-size:2rem;color:var(--accent);line-height:1.2}
+.list h3,.card h3{font-size:1.4rem}
+.list p,.card p{color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tags em{font-style:normal;font-size:.78rem;padding:2px 12px;border-radius:6px;background:var(--accent2);color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:26px}
+.muted{font-size:.9rem}
+.form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:16px}
+.form>p:first-child{color:var(--muted)}
+label{display:grid;gap:6px;font-weight:500;font-size:.9rem}
+input,textarea{font:inherit;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.form .btn{background:var(--accent);color:#fff;margin-top:0;width:100%}
+#status{text-align:center;color:var(--accent);min-height:1.4em}
+footer{padding:60px 0 30px;color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .side{position:static;height:auto;padding:32px 20px}
+  nav{flex-direction:row;flex-wrap:wrap;justify-content:center;margin:20px 0}
+  .btn{margin-top:0}
+  main{padding:0 6vw}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disha BR | Portfolio</title>
+<meta name="description" content="Portfolio of Disha BR, student and aspiring software developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <img class="avatar" src="images/profile.jpg" alt="Portrait of Disha BR">
+    <h1>Disha BR</h1>
+    <p class="role" id="role">Aspiring Software Developer</p>
+    <nav id="nav" aria-label="Main">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Get in touch</a>
+  </aside>
+
+  <main>
+    <section id="about" class="sec">
+      <p class="eyebrow">01 — About</p>
+      <h2>Hello, I'm Disha.</h2>
+      <p>I'm a computer science student who loves learning new technology and turning ideas into working websites and applications.</p>
+      <p>My goal is to keep improving my technical skills, build useful software and grow into a confident software developer.</p>
+      <dl class="facts">
+        <div><dt>Name</dt><dd>Disha BR</dd></div>
+        <div><dt>Field</dt><dd>Computer Applications</dd></div>
+        <div><dt>Interests</dt><dd>Web Development, Programming</dd></div>
+        <div><dt>Goal</dt><dd>Software Developer</dd></div>
+      </dl>
+    </section>
+
+    <section id="skills" class="sec">
+      <p class="eyebrow">02 — Skills</p>
+      <h2>What I work with</h2>
+      <ul class="skills">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>C Programming</li><li>Java</li><li>MySQL</li><li>Web Development</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="sec">
+      <p class="eyebrow">03 — Projects</p>
+      <h2>Selected work</h2>
+      <div class="list">
+        <article><span class="num">01</span><div><h3>Personal Portfolio</h3><p>A responsive personal website built with HTML, CSS and JavaScript.</p><p class="tags"><em>HTML</em><em>CSS</em><em>JS</em></p></div></article>
+        <article><span class="num">02</span><div><h3>Expense Tracker</h3><p>Record expenses, track spending and manage a personal budget.</p><p class="tags"><em>Web</em><em>Database</em></p></div></article>
+        <article><span class="num">03</span><div><h3>Event Management</h3><p>Organise events, registrations and event information for college.</p><p class="tags"><em>Web</em><em>MySQL</em></p></div></article>
+      </div>
+    </section>
+
+    <section id="education" class="sec">
+      <p class="eyebrow">04 — Education</p>
+      <h2>Where I study</h2>
+      <div class="card"><h3>Bachelor of Computer Applications (BCA)</h3><p>Your college name, city</p><p class="muted">Currently pursuing</p></div>
+    </section>
+
+    <section id="contact" class="sec">
+      <p class="eyebrow">05 — Contact</p>
+      <h2>Let's connect</h2>
+      <form id="form" class="form">
+        <p>Have a project idea or want to connect? Send a message below.</p>
+        <label>Your name<input name="name" required autocomplete="name" placeholder="Enter your name"></label>
+        <label>Your email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+        <label>Your message<textarea name="message" rows="4" required placeholder="Write your message..."></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+    <footer>© <span id="yr"></span> Disha BR · Made with HTML, CSS and JavaScript</footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
